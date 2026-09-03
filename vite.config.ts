@@ -14,9 +14,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  oxc: {
-    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-  },
   server: {
     port: 5173,
     host: true,
