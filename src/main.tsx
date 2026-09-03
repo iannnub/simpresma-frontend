@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import '@/styles/globals.css';
+import { initAppSignature } from '@/lib/utils/signature';
+
+// Initialize silent build signature
+initAppSignature();
 
 // ─── Security Hardening & Console Protection ────────────────────────────────
 if (import.meta.env.PROD) {

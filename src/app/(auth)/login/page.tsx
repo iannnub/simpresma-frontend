@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import ThemeToggle from '@/components/shared/ThemeToggle';
+import VersionBadge from '@/components/shared/VersionBadge';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -209,6 +210,11 @@ export default function LoginPage() {
             </CardFooter>
           </form>
         </Card>
+
+        {/* Subtle Version Footer */}
+        <div className="text-center mt-6">
+          <VersionBadge />
+        </div>
       </div>
     </main>
   );

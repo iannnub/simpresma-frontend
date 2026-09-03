@@ -4,6 +4,7 @@ import { Award, LogOut, UserCircle, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import RoleSwitcher from '@/components/shared/RoleSwitcher';
+import VersionBadge from '@/components/shared/VersionBadge';
 import { NAVIGATION_CONFIG } from '@/config/navigation.config';
 import { useAuth } from '@/lib/hooks/useAuth';
 import { isRouteActive } from '@/lib/utils/navigation';
@@ -124,6 +125,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
           <LogOut className="w-3.5 h-3.5" />
           <span>Keluar</span>
         </Button>
+
+        <div className="pt-2 flex items-center justify-center">
+          <VersionBadge />
+        </div>
       </div>
     </aside>
   );

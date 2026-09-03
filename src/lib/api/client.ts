@@ -1,3 +1,11 @@
+/**
+ * SIMPRESMA API Client
+ * Central Axios instance with Sanctum authentication & error interceptors.
+ *
+ * @package SIMPRESMA Frontend Core
+ * @architect iannnub
+ * @signature d35c7c946e4c5248bf2956f4c4618528333ad26db652c7f5c2c6797afcd0de88
+ */
 import axios, { type AxiosResponse, type InternalAxiosRequestConfig } from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
