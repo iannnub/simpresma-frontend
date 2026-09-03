@@ -26,3 +26,9 @@ dist-ssr
 # Environment files
 .env.local
 .env.*.local
+
+# Project specs & local assistant rules
+.antigravityrules
+*.md
+*.MD
+!README.md
