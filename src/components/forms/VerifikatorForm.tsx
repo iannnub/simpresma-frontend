@@ -73,7 +73,7 @@ export const VerifikatorForm: React.FC<VerifikatorFormProps> = ({
             <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-2">
               <UserPlus className="w-5 h-5" />
             </div>
-            <DialogTitle className="text-base font-bold text-slate-900">
+            <DialogTitle className="text-base font-bold text-slate-900 dark:text-slate-100">
               Tugaskan Dosen Verifikator
             </DialogTitle>
             <DialogDescription className="text-xs text-muted-foreground">

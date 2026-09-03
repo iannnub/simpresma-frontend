@@ -85,7 +85,7 @@ export const BidangMKForm: React.FC<BidangMKFormProps> = ({
             <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-2">
               <BookPlus className="w-5 h-5" />
             </div>
-            <DialogTitle className="text-base font-bold text-slate-900">
+            <DialogTitle className="text-base font-bold text-slate-900 dark:text-slate-100">
               Tambah Pemetaan Bidang & Mata Kuliah
             </DialogTitle>
             <DialogDescription className="text-xs text-muted-foreground">

@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import ThemeToggle from '@/components/shared/ThemeToggle';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -54,12 +55,17 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 flex flex-col justify-center items-center px-4 py-12 sm:px-6 lg:px-8" role="main" aria-label="Halaman Login SIMPRESMA">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col justify-center items-center px-4 py-12 sm:px-6 lg:px-8 transition-colors duration-200 relative" role="main" aria-label="Halaman Login SIMPRESMA">
+      {/* Theme Toggle in Top Right */}
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
+        <ThemeToggle />
+      </div>
+
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center space-y-2 mb-6">
         <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary text-primary-foreground shadow-md mb-2">
           <Award className="w-8 h-8" />
         </div>
-        <h1 className="text-3xl font-extrabold tracking-tight text-slate-900">
+        <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
           SIMPRESMA
         </h1>
         <p className="text-sm text-muted-foreground max-w-xs mx-auto">
@@ -68,9 +74,9 @@ export default function LoginPage() {
       </div>
 
       <div className="w-full max-w-md">
-        <Card className="border shadow-md">
+        <Card className="border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-xl font-bold tracking-tight">Masuk ke Akun</CardTitle>
+            <CardTitle className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Masuk ke Akun</CardTitle>
             <CardDescription>
               Masukkan email dan kata sandi Anda untuk melanjutkan
             </CardDescription>
@@ -156,37 +162,37 @@ export default function LoginPage() {
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="text-xs justify-start h-8 px-2.5"
+                    className="text-xs justify-start h-8 px-2.5 bg-white dark:bg-slate-800/60 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"
                     onClick={() => setDemoAccount('mhs.si@test.com')}
                   >
-                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-blue-600" /> Mahasiswa SI
+                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-blue-600 dark:text-blue-400" /> Mahasiswa SI
                   </Button>
                   <Button
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="text-xs justify-start h-8 px-2.5"
+                    className="text-xs justify-start h-8 px-2.5 bg-white dark:bg-slate-800/60 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"
                     onClick={() => setDemoAccount('verif.si@test.com')}
                   >
-                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-purple-600" /> Verifikator SI
+                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-purple-600 dark:text-purple-400" /> Verifikator SI
                   </Button>
                   <Button
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="text-xs justify-start h-8 px-2.5"
+                    className="text-xs justify-start h-8 px-2.5 bg-white dark:bg-slate-800/60 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"
                     onClick={() => setDemoAccount('tendik@test.com')}
                   >
-                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-emerald-600" /> Tendik
+                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-emerald-600 dark:text-emerald-400" /> Tendik
                   </Button>
                   <Button
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="text-xs justify-start h-8 px-2.5"
+                    className="text-xs justify-start h-8 px-2.5 bg-white dark:bg-slate-800/60 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"
                     onClick={() => setDemoAccount('wadek@test.com')}
                   >
-                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-rose-600" /> Wadek
+                    <UserCheck className="w-3.5 h-3.5 mr-1.5 text-rose-600 dark:text-rose-400" /> Wadek
                   </Button>
                 </div>
                 <Button

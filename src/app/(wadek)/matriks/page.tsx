@@ -88,7 +88,7 @@ export default function WadekMatriksPage() {
     <div className="space-y-6">
       {/* Page Header */}
       <div>
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
           Kelola Matriks Konversi SKS
         </h2>
         <p className="text-sm text-muted-foreground mt-0.5">
@@ -97,10 +97,10 @@ export default function WadekMatriksPage() {
         </p>
       </div>
 
-      <Card className="border-slate-200 shadow-sm">
-        <CardHeader className="pb-4 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <Card className="border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+        <CardHeader className="pb-4 border-b border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <CardTitle className="text-base font-semibold flex items-center gap-2">
+            <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <Sliders className="w-4 h-4 text-primary" /> Tabel Matriks Konversi Fakultas
             </CardTitle>
             <CardDescription className="text-xs">
@@ -111,7 +111,7 @@ export default function WadekMatriksPage() {
           {/* Filter Tingkatan */}
           <div className="flex items-center gap-2">
             <Filter className="w-3.5 h-3.5 text-muted-foreground" />
-            <span className="text-xs font-medium text-slate-600">Tingkat:</span>
+            <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Tingkat:</span>
             <Select value={filterTingkat} onValueChange={setFilterTingkat}>
               <SelectTrigger className="w-[180px] h-8 text-xs">
                 <SelectValue placeholder="Semua Tingkatan" />
@@ -130,14 +130,14 @@ export default function WadekMatriksPage() {
 
         <CardContent className="pt-4">
           {isLoading ? (
-            <div className="p-12 text-center bg-white">
+            <div className="p-12 text-center bg-transparent">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
               <p className="mt-2 text-sm text-muted-foreground">Memuat data matriks...</p>
             </div>
           ) : (
-            <div className="rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+            <div className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
               <Table>
-                <TableHeader className="bg-slate-50 text-xs">
+                <TableHeader className="bg-slate-50 dark:bg-slate-800/80 text-xs">
                   <TableRow>
                     <TableHead className="w-[60px]">No</TableHead>
                     <TableHead>Tingkatan Lomba</TableHead>
@@ -153,23 +153,23 @@ export default function WadekMatriksPage() {
                   {filteredList.map((item, idx) => {
                     const isValid = item.min_sks !== null && item.max_sks !== null;
                     return (
-                      <TableRow key={item.id} className="hover:bg-slate-50/80 text-xs">
+                      <TableRow key={item.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/50 text-xs transition-colors">
                         <TableCell className="font-mono text-slate-400 font-semibold">
                           {idx + 1}
                         </TableCell>
-                        <TableCell className="font-semibold text-slate-900">
+                        <TableCell className="font-semibold text-slate-900 dark:text-slate-100">
                           {item.tingkatan?.nama || `Tingkatan #${item.tingkatan_id}`}
                         </TableCell>
-                        <TableCell className="text-slate-700">
+                        <TableCell className="text-slate-700 dark:text-slate-300">
                           {item.tahapan?.nama || `Tahapan #${item.tahapan_id}`}
                         </TableCell>
                         <TableCell className="text-center">
                           {isValid ? (
-                            <span className="font-mono font-bold px-2 py-0.5 bg-blue-50 text-primary border border-blue-200 rounded">
+                            <span className="font-mono font-bold px-2 py-0.5 bg-blue-50 dark:bg-blue-950/40 text-primary dark:text-blue-300 border border-blue-200 dark:border-blue-800 rounded">
                               {item.min_sks} - {item.max_sks} SKS
                             </span>
                           ) : (
-                            <span className="text-slate-400 font-mono">-</span>
+                            <span className="text-slate-400 dark:text-slate-500 font-mono">-</span>
                           )}
                         </TableCell>
                         <TableCell className="text-center">
@@ -178,21 +178,21 @@ export default function WadekMatriksPage() {
                               {item.huruf_nilai}
                             </Badge>
                           ) : (
-                            <span className="text-slate-400 font-mono">-</span>
+                            <span className="text-slate-400 dark:text-slate-500 font-mono">-</span>
                           )}
                         </TableCell>
                         <TableCell>
                           {isValid ? (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400">
                               <CheckCircle2 className="w-3.5 h-3.5" /> Konversi Valid
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-400">
+                            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-400 dark:text-slate-500">
                               <XCircle className="w-3.5 h-3.5" /> Tidak Ada Konversi
                             </span>
                           )}
                         </TableCell>
-                        <TableCell className="text-slate-500 whitespace-nowrap text-[11px]">
+                        <TableCell className="text-slate-500 dark:text-slate-400 whitespace-nowrap text-[11px]">
                           <div>{formatDate(item.updated_at)}</div>
                           {item.updatedBy && (
                             <div className="text-[10px] text-muted-foreground">
@@ -205,7 +205,7 @@ export default function WadekMatriksPage() {
                             variant="ghost"
                             size="sm"
                             onClick={() => handleOpenEdit(item)}
-                            className="h-8 px-2 text-xs gap-1 text-primary hover:bg-primary/10"
+                            className="h-8 px-2 text-xs gap-1 text-primary hover:bg-primary/10 dark:hover:bg-primary/20"
                           >
                             <Edit className="w-3.5 h-3.5" /> Edit
                           </Button>

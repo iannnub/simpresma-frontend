@@ -94,7 +94,7 @@ export default function WadekBidangMKPage() {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
             Pemetaan Bidang & Mata Kuliah
           </h2>
           <p className="text-sm text-muted-foreground mt-0.5">
@@ -111,10 +111,10 @@ export default function WadekBidangMKPage() {
       </div>
 
       {/* Filter & Table Card */}
-      <Card className="border-slate-200 shadow-sm">
-        <CardHeader className="pb-4 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <Card className="border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+        <CardHeader className="pb-4 border-b border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <CardTitle className="text-base font-semibold flex items-center gap-2">
+            <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <Network className="w-4 h-4 text-primary" /> Daftar Pemetaan Aktif
             </CardTitle>
             <CardDescription className="text-xs">
@@ -160,14 +160,14 @@ export default function WadekBidangMKPage() {
 
         <CardContent className="pt-4">
           {isLoading ? (
-            <div className="p-12 text-center bg-white">
+            <div className="p-12 text-center bg-transparent">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
               <p className="mt-2 text-sm text-muted-foreground">Memuat data pemetaan...</p>
             </div>
           ) : mappingList.length === 0 ? (
-            <div className="text-center py-14 px-4 bg-slate-50/50 rounded-xl border border-dashed border-slate-200 space-y-3">
-              <BookOpen className="w-10 h-10 text-slate-300 mx-auto" />
-              <h4 className="text-sm font-semibold text-slate-800">
+            <div className="text-center py-14 px-4 bg-slate-50/50 dark:bg-slate-900/50 rounded-xl border border-dashed border-slate-200 dark:border-slate-800 space-y-3">
+              <BookOpen className="w-10 h-10 text-slate-300 dark:text-slate-600 mx-auto" />
+              <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">
                 Tidak Ada Pemetaan Ditemukan
               </h4>
               <p className="text-xs text-muted-foreground max-w-sm mx-auto">
@@ -183,9 +183,9 @@ export default function WadekBidangMKPage() {
               </Button>
             </div>
           ) : (
-            <div className="rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+            <div className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
               <Table>
-                <TableHeader className="bg-slate-50 text-xs">
+                <TableHeader className="bg-slate-50 dark:bg-slate-800/80 text-xs">
                   <TableRow>
                     <TableHead className="w-[60px]">No</TableHead>
                     <TableHead>Bidang Lomba</TableHead>
@@ -200,26 +200,26 @@ export default function WadekBidangMKPage() {
                     const mk = item.mata_kuliah || item.mataKuliah;
                     const prodi = mk?.prodi;
                     return (
-                      <TableRow key={item.id} className="hover:bg-slate-50/80 text-xs">
+                      <TableRow key={item.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/50 text-xs transition-colors">
                         <TableCell className="font-mono text-slate-400 font-semibold">
                           {idx + 1}
                         </TableCell>
-                        <TableCell className="font-semibold text-slate-900">
+                        <TableCell className="font-semibold text-slate-900 dark:text-slate-100">
                           {item.bidang?.nama || `Bidang #${item.bidang_id}`}
                         </TableCell>
                         <TableCell>
-                          <div className="font-bold text-slate-900">{mk?.nama_mk || '-'}</div>
+                          <div className="font-bold text-slate-900 dark:text-slate-100">{mk?.nama_mk || '-'}</div>
                           <div className="font-mono text-[11px] text-muted-foreground">
                             {mk?.kode_mk}
                           </div>
                         </TableCell>
                         <TableCell>
-                          <span className="font-bold text-xs px-2 py-0.5 bg-slate-100 rounded text-slate-700">
+                          <span className="font-bold text-xs px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-slate-700 dark:text-slate-300 border border-slate-200/50 dark:border-slate-700/50">
                             {prodi?.singkatan || '-'}
                           </span>
                         </TableCell>
                         <TableCell className="text-center">
-                          <span className="font-mono font-bold text-slate-800">
+                          <span className="font-mono font-bold text-slate-800 dark:text-slate-200">
                             {mk?.sks || 0} SKS
                           </span>
                         </TableCell>
@@ -228,7 +228,7 @@ export default function WadekBidangMKPage() {
                             variant="ghost"
                             size="sm"
                             onClick={() => setDeleteTarget(item)}
-                            className="h-8 px-2 text-xs gap-1 text-rose-600 hover:bg-rose-50 hover:text-rose-700"
+                            className="h-8 px-2 text-xs gap-1 text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/40 hover:text-rose-700 dark:hover:text-rose-300"
                           >
                             <Trash2 className="w-3.5 h-3.5" /> Hapus
                           </Button>
@@ -256,24 +256,24 @@ export default function WadekBidangMKPage() {
       <Dialog open={Boolean(deleteTarget)} onOpenChange={(open) => !open && setDeleteTarget(null)}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <div className="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mb-2">
+            <div className="w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-2">
               <AlertTriangle className="w-5 h-5" />
             </div>
-            <DialogTitle className="text-base font-bold text-slate-900">
+            <DialogTitle className="text-base font-bold text-slate-900 dark:text-slate-100">
               Hapus Pemetaan Mata Kuliah
             </DialogTitle>
             <DialogDescription className="text-xs text-muted-foreground leading-relaxed">
               Anda yakin ingin menghapus pemetaan bidang{' '}
-              <strong className="text-slate-800">{deleteTarget?.bidang?.nama}</strong> dengan mata
+              <strong className="text-slate-800 dark:text-slate-200">{deleteTarget?.bidang?.nama}</strong> dengan mata
               kuliah{' '}
-              <strong className="text-slate-800">
+              <strong className="text-slate-800 dark:text-slate-200">
                 {(deleteTarget?.mata_kuliah || deleteTarget?.mataKuliah)?.nama_mk}
               </strong>
               ?
             </DialogDescription>
           </DialogHeader>
 
-          <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900">
+          <div className="p-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 rounded-xl text-xs text-rose-900 dark:text-rose-200">
             Setelah dihapus, mata kuliah ini tidak akan lagi muncul dalam pilihan konversi SKS untuk
             bidang lomba tersebut.
           </div>

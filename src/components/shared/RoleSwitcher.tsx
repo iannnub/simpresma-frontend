@@ -27,7 +27,7 @@ export const RoleSwitcher: React.FC = () => {
 
   if (!currentRole || availableRoles.length <= 1) {
     return (
-      <div className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-slate-600 bg-slate-100 rounded-lg">
+      <div className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
         <Shield className="w-3.5 h-3.5 text-primary" />
         <span className="capitalize">{ROLE_LABELS[currentRole as UserRole] || currentRole}</span>
       </div>
@@ -40,7 +40,7 @@ export const RoleSwitcher: React.FC = () => {
         <Button
           variant="outline"
           size="sm"
-          className="w-full justify-between h-9 px-3 text-xs bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-800"
+          className="w-full justify-between h-9 px-3 text-xs bg-slate-50 dark:bg-slate-800/80 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100"
         >
           <div className="flex items-center gap-2 truncate">
             <Shield className="w-3.5 h-3.5 text-primary shrink-0" />

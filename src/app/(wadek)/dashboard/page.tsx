@@ -332,8 +332,8 @@ export default function WadekDashboardPage() {
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={barChartData} margin={{ top: 18, right: 10, left: -20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(148, 163, 184, 0.2)" />
-                  <XAxis dataKey="name" tick={{ fontSize: 11 }} />
-                  <YAxis allowDecimals={false} tick={{ fontSize: 11 }} />
+                  <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#94a3b8' }} />
+                  <YAxis allowDecimals={false} tick={{ fontSize: 11, fill: '#94a3b8' }} />
                   <Tooltip
                     contentStyle={{
                       backgroundColor: 'var(--popover, #1e293b)',

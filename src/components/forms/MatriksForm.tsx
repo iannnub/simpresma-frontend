@@ -96,7 +96,7 @@ export const MatriksForm: React.FC<MatriksFormProps> = ({
             <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-2">
               <Sliders className="w-5 h-5" />
             </div>
-            <DialogTitle className="text-base font-bold text-slate-900">
+            <DialogTitle className="text-base font-bold text-slate-900 dark:text-slate-100">
               Edit Matriks Konversi SKS
             </DialogTitle>
             <DialogDescription className="text-xs text-muted-foreground">
@@ -106,7 +106,7 @@ export const MatriksForm: React.FC<MatriksFormProps> = ({
 
           <div className="space-y-4 py-4">
             {/* Checkbox: Apakah kombinasi ini berhak konversi */}
-            <div className="flex items-center space-x-2 p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <div className="flex items-center space-x-2 p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
               <Checkbox
                 id="is_valid_combination"
                 checked={isValidCombination}
@@ -114,7 +114,7 @@ export const MatriksForm: React.FC<MatriksFormProps> = ({
               />
               <label
                 htmlFor="is_valid_combination"
-                className="text-xs font-semibold text-slate-800 cursor-pointer select-none"
+                className="text-xs font-semibold text-slate-800 dark:text-slate-200 cursor-pointer select-none"
               >
                 Kombinasi ini berhak konversi SKS (Valid)
               </label>
@@ -176,7 +176,7 @@ export const MatriksForm: React.FC<MatriksFormProps> = ({
                 </div>
               </div>
             ) : (
-              <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800">
+              <div className="p-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 rounded-xl text-xs text-rose-800 dark:text-rose-200">
                 Kombinasi ini akan disetel menjadi <strong>NULL</strong> (tidak berhak mendapatkan
                 konversi SKS dan mahasiswa tidak dapat memilih kombinasi ini).
               </div>
