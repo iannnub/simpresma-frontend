@@ -15,7 +15,7 @@ export const ForbiddenPage: React.FC = () => {
           <ShieldAlert className="w-8 h-8" />
         </div>
         <div className="space-y-2">
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">403 — Akses Ditolak</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900">403: Akses Ditolak</h1>
           <p className="text-sm text-muted-foreground">
             Anda tidak memiliki hak akses untuk membuka halaman ini dengan peran ({currentRole || 'Guest'}).
           </p>

@@ -140,7 +140,7 @@ export const ExportButton: React.FC<ExportButtonProps> = ({
           </div>
           <div>
             <p className="text-sm font-medium">Microsoft Excel</p>
-            <p className="text-xs text-muted-foreground">.xlsx — untuk presentasi</p>
+            <p className="text-xs text-muted-foreground">.xlsx - untuk presentasi</p>
           </div>
           {loadingFormat === 'xlsx' && <Loader2 className="w-3.5 h-3.5 ml-auto animate-spin text-emerald-500" />}
         </DropdownMenuItem>
@@ -156,7 +156,7 @@ export const ExportButton: React.FC<ExportButtonProps> = ({
           </div>
           <div>
             <p className="text-sm font-medium">CSV</p>
-            <p className="text-xs text-muted-foreground">.csv — untuk analisis data</p>
+            <p className="text-xs text-muted-foreground">.csv - untuk analisis data</p>
           </div>
           {loadingFormat === 'csv' && <Loader2 className="w-3.5 h-3.5 ml-auto animate-spin text-blue-500" />}
         </DropdownMenuItem>

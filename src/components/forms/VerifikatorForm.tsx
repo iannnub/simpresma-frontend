@@ -77,7 +77,7 @@ export const VerifikatorForm: React.FC<VerifikatorFormProps> = ({
               Tugaskan Dosen Verifikator
             </DialogTitle>
             <DialogDescription className="text-xs text-muted-foreground">
-              Tetapkan dosen sebagai anggota tim verifikator resmi untuk Program Studi.
+              Tetapkan dosen sebagai verifikator Program Studi.
             </DialogDescription>
           </DialogHeader>
 
@@ -117,8 +117,7 @@ export const VerifikatorForm: React.FC<VerifikatorFormProps> = ({
                 disabled={isLoading}
               />
               <p className="text-[11px] text-muted-foreground">
-                Sistem akan secara otomatis menyematkan hak akses (role) <strong>Verifikator</strong>{' '}
-                kepada pengguna ini dan meregistrasikannya ke dalam scope prodi terpilih.
+                Pengguna ini akan memperoleh peran Verifikator untuk program studi yang dipilih.
               </p>
             </div>
 

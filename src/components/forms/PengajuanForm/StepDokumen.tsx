@@ -54,8 +54,8 @@ export const StepDokumen: React.FC<StepDokumenProps> = ({
               <FileCheck className="w-4 h-4 text-primary" /> Dokumen & Tautan Bukti Prestasi
             </h3>
             <p className="text-xs text-muted-foreground mt-0.5">
-              Sistem SIMPRESMA menerapkan prinsip <em>Zero File Upload</em>. Cantumkan tautan bukti
-              resmi (Google Drive, Cloud Storage, atau website lomba).
+              SIMPRESMA tidak menyimpan berkas langsung. Masukkan tautan bukti lomba (Google Drive,
+              Cloud Storage, atau situs web lomba).
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export const StepDokumen: React.FC<StepDokumenProps> = ({
               <span>
                 Tautan SK / Surat Tugas Mahasiswa <span className="text-destructive font-bold">*</span>
               </span>
-              <span className="text-[11px] font-normal text-muted-foreground">Wajib Dokumen Resmi</span>
+              <span className="text-[11px] font-normal text-muted-foreground">Dokumen Wajib</span>
             </Label>
             <div className="relative">
               <LinkIcon className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -121,7 +121,7 @@ export const StepDokumen: React.FC<StepDokumenProps> = ({
               <span>
                 Tautan SK / Surat Tugas Dosen Pembimbing <span className="text-destructive font-bold">*</span>
               </span>
-              <span className="text-[11px] font-normal text-muted-foreground">Wajib Dokumen Resmi</span>
+              <span className="text-[11px] font-normal text-muted-foreground">Dokumen Wajib</span>
             </Label>
             <div className="relative">
               <LinkIcon className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -133,7 +133,7 @@ export const StepDokumen: React.FC<StepDokumenProps> = ({
               />
             </div>
             <p className="text-[11px] text-muted-foreground">
-              Tautan SK / Surat Tugas resmi penunjukan Dosen Pembimbing pendamping kompetisi.
+              Tautan SK / Surat Tugas penunjukan Dosen Pembimbing lomba.
             </p>
             {errors.link_surat_tugas_dosen && (
               <p className="text-xs font-medium text-destructive">

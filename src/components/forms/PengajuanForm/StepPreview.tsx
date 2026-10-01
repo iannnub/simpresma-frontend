@@ -7,7 +7,6 @@ import {
   Send,
   Loader2,
   ExternalLink,
-  Sparkles,
   AlertTriangle,
   CheckCircle2,
   ShieldAlert,
@@ -73,8 +72,8 @@ export const StepPreview: React.FC<StepPreviewProps> = ({
               </p>
             </div>
             {matriks && (
-              <Badge className="bg-emerald-600 text-white gap-1 text-xs py-1 px-2.5">
-                <Sparkles className="w-3.5 h-3.5" /> Prediksi Nilai: {matriks.huruf_nilai}
+              <Badge className="bg-emerald-600 text-white text-xs py-1 px-2.5">
+                Prediksi Nilai: {matriks.huruf_nilai}
               </Badge>
             )}
           </div>
@@ -100,7 +99,7 @@ export const StepPreview: React.FC<StepPreviewProps> = ({
               <div>
                 <span className="text-muted-foreground">Tingkatan & Capaian:</span>
                 <p className="font-semibold text-slate-900 dark:text-slate-100 mt-0.5">
-                  {tingkatanName} — {tahapanName}
+                  {tingkatanName} - {tahapanName}
                 </p>
               </div>
               <div>
@@ -214,11 +213,11 @@ export const StepPreview: React.FC<StepPreviewProps> = ({
 
             {selectedMks.length === 0 ? (
               <div className="p-4 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/50 rounded-2xl text-xs text-blue-900 dark:text-blue-200 space-y-1">
-                <p className="font-bold flex items-center gap-1.5 text-blue-950 dark:text-blue-100">
-                  <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" /> Tanpa Konversi SKS (Pencatatan Partisipasi / Telah Ditempuh)
+                <p className="font-bold text-blue-950 dark:text-blue-100">
+                  Tanpa Konversi SKS (Pencatatan Partisipasi / Telah Ditempuh)
                 </p>
                 <p className="text-blue-800 dark:text-blue-300 leading-relaxed">
-                  Pengajuan ini dikirimkan untuk dokumentasi prestasi resmi dalam sistem SIMPRESMA tanpa konversi SKS mata kuliah (mata kuliah dilewati atau seluruh mata kuliah relevan telah Anda tempuh di semester sebelumnya).
+                  Pengajuan ini dikirimkan untuk pencatatan prestasi tanpa konversi SKS mata kuliah (mata kuliah dilewati atau seluruh mata kuliah relevan telah Anda tempuh di semester sebelumnya).
                 </p>
               </div>
             ) : (
@@ -371,7 +370,7 @@ export const StepPreview: React.FC<StepPreviewProps> = ({
             <div className="p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-200 text-xs flex items-start gap-2">
               <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
               <p className="leading-relaxed text-[11px]">
-                Saya menyatakan dengan sungguh-sungguh bahwa data dan berkas yang dicantumkan adalah valid dan benar. Apabila ditemukan pemalsuan data, pengajuan ini dapat dibatalkan sewaktu-waktu.
+                Saya menyatakan data dan berkas yang dicantumkan sudah benar dan dapat dipertanggungjawabkan. Apabila ditemukan pemalsuan data, pengajuan ini dapat dibatalkan sewaktu-waktu.
               </p>
             </div>
           </div>

@@ -149,7 +149,7 @@ export const BidangMKForm: React.FC<BidangMKFormProps> = ({
                   <SelectContent>
                     {knownMks.map((mk) => (
                       <SelectItem key={mk.id} value={String(mk.id)}>
-                        {mk.kode_mk} — {mk.nama_mk} ({mk.sks} SKS)
+                        {mk.kode_mk} - {mk.nama_mk} ({mk.sks} SKS)
                       </SelectItem>
                     ))}
                   </SelectContent>

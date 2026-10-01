@@ -97,7 +97,7 @@ export default function ProfilePage() {
                 <BookOpen className="w-3 h-3" /> Program Studi
               </p>
               <p className="text-sm text-slate-800 dark:text-slate-200">
-                {user.prodi ? `${user.prodi.singkatan} — ${user.prodi.nama}` : '-'}
+                {user.prodi ? `${user.prodi.singkatan} - ${user.prodi.nama}` : '-'}
               </p>
             </div>
 

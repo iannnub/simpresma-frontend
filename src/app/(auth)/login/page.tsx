@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Award, Lock, Mail, Loader2, Sparkles, UserCheck, Zap, ShieldCheck } from 'lucide-react';
+import { Award, Lock, Mail, Loader2, UserCheck, ShieldCheck } from 'lucide-react';
 import { toast } from 'sonner';
 
 import { loginSchema, type LoginFormData } from '@/lib/schemas/auth.schema';
@@ -144,8 +144,8 @@ export default function LoginPage() {
               {/* Demo Account Quick Pickers */}
               <div className="w-full pt-4 border-t space-y-2.5">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-muted-foreground flex items-center gap-1">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-500" /> Akun Demo Pengujian:
+                  <span className="text-xs font-semibold text-muted-foreground">
+                    Akun Demo Pengujian:
                   </span>
                   <span className="text-[11px] text-muted-foreground">(pass: password)</span>
                 </div>
@@ -203,7 +203,6 @@ export default function LoginPage() {
                   className="w-full text-xs h-7 text-muted-foreground hover:text-foreground"
                   onClick={() => setDemoAccount('multi@test.com')}
                 >
-                  <Zap className="w-3.5 h-3.5 mr-1 text-amber-500" />
                   Multi-Role (Verifikator + Tendik)
                 </Button>
               </div>

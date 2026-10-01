@@ -211,10 +211,10 @@ export default function TendikDashboardPage() {
           <CardHeader className="pb-2">
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <Award className="w-4 h-4 text-emerald-600" />
-              Proporsi Pengajuan Mahasiswa Antar Prodi
+              Pengajuan per Program Studi
             </CardTitle>
             <CardDescription className="text-xs">
-              Persentase dan jumlah mahasiswa pengaju dari 3 program studi
+              Distribusi pengajuan berdasarkan program studi
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -246,12 +246,12 @@ export default function TendikDashboardPage() {
           {isLoadingTendik ? (
             <div className="p-8 text-center bg-slate-50 dark:bg-slate-900 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800">
               <Clock className="w-6 h-6 animate-spin mx-auto text-primary mb-2" />
-              <p className="text-xs text-muted-foreground">Memuat antrian tendik...</p>
+              <p className="text-xs text-muted-foreground">Memuat data pengajuan...</p>
             </div>
           ) : diterimaItems.length === 0 ? (
             <div className="text-center py-10 px-4 bg-slate-50/50 dark:bg-slate-900/50 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800">
               <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-2 opacity-80" />
-              <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Semua Berkas Telah Selesai Diproses</h4>
+              <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Tidak Ada Pengajuan Menunggu SK</h4>
               <p className="text-xs text-muted-foreground mt-0.5">
                 Tidak ada pengajuan berstatus diterima yang belum difinalisasi saat ini.
               </p>

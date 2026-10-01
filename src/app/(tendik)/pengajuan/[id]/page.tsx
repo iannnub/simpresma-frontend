@@ -228,7 +228,7 @@ export default function TendikDetailPengajuanPage() {
               <span className="font-semibold text-slate-900 dark:text-slate-100">{pengajuan.detail_juara || '-'}</span>
             </div>
             <div className="flex justify-between py-1">
-              <span className="text-muted-foreground">Nilai Matriks Resmi:</span>
+              <span className="text-muted-foreground">Nilai Matriks:</span>
               <Badge className="bg-emerald-600 text-white font-mono font-bold">
                 Grade: {snapshotHurufNilai}
               </Badge>
@@ -301,7 +301,7 @@ export default function TendikDetailPengajuanPage() {
         <Card className="overflow-hidden">
           <CardHeader className="bg-emerald-50/60 dark:bg-emerald-950/40 border-b border-slate-100 dark:border-slate-800 py-3.5">
             <CardTitle className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Hasil Konversi Mata Kuliah Resmi
+              <BookOpen className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Hasil Konversi Mata Kuliah
             </CardTitle>
           </CardHeader>
           <CardContent className="p-0 text-xs">

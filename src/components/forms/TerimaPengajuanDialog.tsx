@@ -10,7 +10,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { CheckCircle2, Loader2, Sparkles, MessageSquare } from 'lucide-react';
+import { CheckCircle2, Loader2, Lock, MessageSquare } from 'lucide-react';
 import type { Pengajuan } from '@/types';
 
 interface TerimaPengajuanDialogProps {
@@ -60,7 +60,7 @@ export const TerimaPengajuanDialog: React.FC<TerimaPengajuanDialogProps> = ({
         <div className="space-y-4 py-2 text-xs">
           <div className="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1.5 text-emerald-900">
             <div className="font-semibold flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-emerald-600" />
+              <Lock className="w-4 h-4 text-emerald-600" />
               Penguncian Matriks Konversi (Snapshot)
             </div>
             <p className="leading-relaxed opacity-90">
@@ -114,7 +114,7 @@ export const TerimaPengajuanDialog: React.FC<TerimaPengajuanDialogProps> = ({
             ) : (
               <>
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                Ya, Setujui & Terima
+                Ya, Setujui
               </>
             )}
           </Button>

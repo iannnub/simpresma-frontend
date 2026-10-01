@@ -144,7 +144,7 @@ export default function VerifikatorPengajuanListPage() {
           </div>
           <div className="flex items-center gap-1.5 text-xs text-purple-700 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/40 px-2.5 py-1 rounded-full border border-purple-200 dark:border-purple-800/50 font-medium">
             <Clock className="w-3.5 h-3.5" />
-            <span>Scope Prodi Otomatis</span>
+            <span>Sesuai Prodi Anda</span>
           </div>
         </CardHeader>
 
@@ -159,7 +159,7 @@ export default function VerifikatorPengajuanListPage() {
               <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto mb-3" />
               <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">
                 {statusFilter === 'pending'
-                  ? 'Semua Pengajuan Telah Ditinjau!'
+                  ? 'Semua Pengajuan Telah Ditinjau'
                   : statusFilter === 'riwayat'
                   ? 'Belum Ada Riwayat Verifikasi'
                   : 'Belum Ada Pengajuan'}
@@ -337,15 +337,15 @@ export default function VerifikatorPengajuanListPage() {
                       <Link to={`/verifikator/pengajuan/${item.id}`}>
                         {item.status === 'pending' ? (
                           <>
-                            <Eye className="w-3.5 h-3.5" /> Tinjau & Verifikasi Pengajuan
+                            <Eye className="w-3.5 h-3.5" /> Tinjau Pengajuan
                           </>
                         ) : item.status === 'ditolak' ? (
                           <>
-                            <XCircle className="w-3.5 h-3.5 text-rose-600" /> Buka Detail (Riwayat Ditolak)
+                            <XCircle className="w-3.5 h-3.5 text-rose-600" /> Buka Detail
                           </>
                         ) : (
                           <>
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Buka Detail (Riwayat Disetujui)
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Buka Detail
                           </>
                         )}
                       </Link>

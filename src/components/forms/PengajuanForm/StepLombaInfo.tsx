@@ -19,7 +19,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useBidang, useTahapan, useTingkatan, useMatriks } from '@/lib/hooks/useRefData';
-import { Award, ArrowRight, Sparkles, Info, CheckCircle2 } from 'lucide-react';
+import { Award, ArrowRight, Info, CheckCircle2 } from 'lucide-react';
 import type { MatriksKonversi } from '@/types';
 
 interface StepLombaInfoProps {
@@ -257,19 +257,18 @@ export const StepLombaInfo: React.FC<StepLombaInfoProps> = ({ initialData, onNex
             <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-2 animate-in fade-in-50">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-emerald-900 flex items-center gap-1.5">
-                  <Sparkles className="w-4 h-4 text-emerald-600" />
-                  Estimasi Matriks Konversi SKS Resmi
+                  Estimasi Konversi SKS
                 </span>
                 <Badge className="bg-emerald-600 text-white font-mono text-xs">
                   Grade: {matriks?.huruf_nilai}
                 </Badge>
               </div>
               <p className="text-xs text-emerald-800 leading-relaxed">
-                Kombinasi tingkatan dan capaian ini berhak mendapatkan konversi antara{' '}
+                Berhak atas{' '}
                 <strong className="underline">
-                  {matriks?.min_sks} hingga {matriks?.max_sks} SKS
+                  {matriks?.min_sks}–{matriks?.max_sks} SKS
                 </strong>{' '}
-                dengan konversi huruf nilai <strong>{matriks?.huruf_nilai}</strong>. Anda dapat memilih kombinasi mata kuliah pada langkah selanjutnya.
+                (Nilai <strong>{matriks?.huruf_nilai}</strong>). Pilih mata kuliah pada langkah selanjutnya.
               </p>
             </div>
           )}
@@ -279,10 +278,10 @@ export const StepLombaInfo: React.FC<StepLombaInfoProps> = ({ initialData, onNex
             <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl space-y-2 animate-in fade-in-50">
               <div className="flex items-center gap-2 text-xs font-bold text-blue-900">
                 <Info className="w-4 h-4 text-blue-600 shrink-0" />
-                Pencatatan Partisipasi Prestasi Mahasiswa (Tanpa Konversi SKS)
+                Pencatatan Partisipasi Lomba (Tanpa Konversi SKS)
               </div>
               <p className="text-xs text-blue-800 leading-relaxed">
-                Tahapan capaian ini dicatat resmi oleh fakultas sebagai dokumentasi partisipasi keikutsertaan lomba. Anda tetap dapat melanjutkan pengisian form dan mengunggah dokumen bukti keikutsertaan tanpa perlu memilih mata kuliah konversi.
+                Capaian ini dicatat sebagai dokumentasi keikutsertaan lomba tanpa konversi SKS kurikulum. Anda dapat melanjutkan untuk mengunggah berkas bukti.
               </p>
             </div>
           )}

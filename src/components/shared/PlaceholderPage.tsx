@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/lib/hooks/useAuth';
-import { CheckCircle2, Sparkles } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 interface PlaceholderPageProps {
   title: string;
@@ -52,7 +52,7 @@ export const PlaceholderPage: React.FC<PlaceholderPageProps> = ({
           <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 text-sm flex items-start gap-3">
             <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
             <div className="space-y-1">
-              <p className="font-semibold">Layout & Navigation Terintegrasi Sempurna</p>
+              <p className="font-semibold">Layout dan Navigasi Aktif</p>
               <p className="text-xs text-emerald-800 leading-relaxed">
                 Pengguna <strong>{user?.nama}</strong> aktif dengan peran{' '}
                 <span className="font-bold uppercase tracking-wide">{currentRole}</span>. Navigasi desktop (Sidebar)
@@ -63,11 +63,11 @@ export const PlaceholderPage: React.FC<PlaceholderPageProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 pt-2">
             <div className="p-3 border rounded-lg bg-white flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Menu sidebar disaring dinamis sesuai peran</span>
             </div>
             <div className="p-3 border rounded-lg bg-white flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-blue-500 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Multi-role switcher tersedia di header & sidebar</span>
             </div>
           </div>

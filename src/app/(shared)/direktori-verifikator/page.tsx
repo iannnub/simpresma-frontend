@@ -52,15 +52,15 @@ export default function DirektoriVerifikatorPage() {
         <div className="space-y-1">
           <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white inline-flex items-center gap-1.5 mb-1">
             <ShieldCheck className="w-3.5 h-3.5 text-blue-200" />
-            Direktori Resmi Fakultas
+            Direktori Fakultas
           </span>
           <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
             Direktori Tim Dosen Verifikator
           </h2>
           <p className="text-sm text-blue-100 max-w-xl">
             {currentRole === 'mahasiswa'
-              ? `Daftar dosen verifikator resmi untuk Program Studi ${user?.prodi?.nama || 'Anda'} yang bertugas memvalidasi pengajuan konversi prestasi.`
-              : 'Daftar dosen verifikator resmi yang ditugaskan Dekanat untuk memvalidasi dan menilai prestasi mahasiswa di setiap program studi.'}
+              ? `Daftar dosen verifikator Program Studi ${user?.prodi?.nama || 'Anda'} yang bertugas memvalidasi pengajuan konversi prestasi.`
+              : 'Daftar dosen verifikator yang ditugaskan Dekanat untuk memvalidasi dan menilai prestasi mahasiswa di setiap program studi.'}
           </p>
         </div>
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-3 rounded-xl text-center self-start sm:self-center shrink-0">

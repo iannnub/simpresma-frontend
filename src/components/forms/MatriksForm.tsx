@@ -100,7 +100,7 @@ export const MatriksForm: React.FC<MatriksFormProps> = ({
               Edit Matriks Konversi SKS
             </DialogTitle>
             <DialogDescription className="text-xs text-muted-foreground">
-              {item?.tingkatan?.nama} — {item?.tahapan?.nama}
+              {item?.tingkatan?.nama} - {item?.tahapan?.nama}
             </DialogDescription>
           </DialogHeader>
 
@@ -177,8 +177,7 @@ export const MatriksForm: React.FC<MatriksFormProps> = ({
               </div>
             ) : (
               <div className="p-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 rounded-xl text-xs text-rose-800 dark:text-rose-200">
-                Kombinasi ini akan disetel menjadi <strong>NULL</strong> (tidak berhak mendapatkan
-                konversi SKS dan mahasiswa tidak dapat memilih kombinasi ini).
+                Kombinasi ini diatur sebagai <strong>tidak berlaku konversi SKS</strong> (mahasiswa dapat mencatat prestasi namun tanpa pengajuan konversi mata kuliah).
               </div>
             )}
 

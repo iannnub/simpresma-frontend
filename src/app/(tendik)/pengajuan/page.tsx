@@ -135,7 +135,7 @@ export default function TendikPengajuanListPage() {
           <div>
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100">
               {statusFilter === 'diterima'
-                ? 'Antrian Pengajuan Siap Finalisasi'
+                ? 'Antrean Pengajuan Siap Finalisasi'
                 : statusFilter === 'riwayat'
                 ? 'Riwayat Pengajuan Selesai'
                 : 'Seluruh Pengajuan Mahasiswa'}
@@ -161,7 +161,7 @@ export default function TendikPengajuanListPage() {
               <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto mb-3" />
               <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">
                 {statusFilter === 'diterima'
-                  ? 'Semua Pengajuan Telah Difinalisasi!'
+                  ? 'Semua Pengajuan Telah Difinalisasi'
                   : statusFilter === 'riwayat'
                   ? 'Belum Ada Riwayat Selesai'
                   : 'Belum Ada Pengajuan'}
@@ -219,7 +219,7 @@ export default function TendikPengajuanListPage() {
                             {item.nama_lomba}
                           </div>
                           <div className="text-[11px] text-muted-foreground mt-0.5">
-                            {item.tingkatan?.nama} — {item.tahapan?.nama}
+                            {item.tingkatan?.nama} - {item.tahapan?.nama}
                           </div>
                         </TableCell>
                         <TableCell className="text-center">
@@ -328,12 +328,12 @@ export default function TendikPengajuanListPage() {
                         {item.status === 'diterima' ? (
                           <>
                             <FileCheck2 className="w-3.5 h-3.5" />
-                            Proses Finalisasi Nilai Konversi
+                            Finalisasi Nilai Konversi
                           </>
                         ) : (
                           <>
                             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                            Buka Detail (Riwayat Selesai)
+                            Buka Detail
                           </>
                         )}
                       </Link>

@@ -110,7 +110,7 @@ export const StepMataKuliah: React.FC<StepMataKuliahProps> = ({
                 Pencatatan Partisipasi Prestasi (Tanpa Konversi SKS)
               </div>
               <p className="text-xs text-blue-900 dark:text-blue-300 leading-relaxed">
-                Capaian perlombaan yang Anda ajukan dicatat resmi oleh fakultas sebagai rekapitulasi keikutsertaan kompetisi mahasiswa. Tidak ada mata kuliah konversi SKS kurikulum untuk capaian ini.
+                Capaian lomba yang Anda ajukan dicatat sebagai dokumentasi partisipasi kompetisi mahasiswa tanpa konversi SKS kurikulum.
               </p>
               <p className="text-xs text-blue-800 dark:text-blue-400 font-medium">
                 Anda dapat langsung melanjutkan ke langkah berikutnya untuk meninjau dan mengirimkan pengajuan.
@@ -182,7 +182,7 @@ export const StepMataKuliah: React.FC<StepMataKuliahProps> = ({
                       {isZeroSelected
                         ? 'Anda dapat melewati langkah ini jika seluruh mata kuliah terkait sudah pernah Anda tempuh di semester sebelumnya.'
                         : isBelowMin
-                        ? `Diperbolehkan mengambil di bawah kuota capaian (${minSks}-${maxSks} SKS) apabila sisa mata kuliah yang belum Anda tempuh kurang dari kuota tersebut.`
+                        ? `Boleh memilih di bawah kuota capaian (${minSks}-${maxSks} SKS) jika sisa mata kuliah yang belum ditempuh terbatas.`
                         : `Sesuai batas kuota capaian prestasi (Maksimal ${maxSks} SKS, Prediksi Nilai: ${matriks?.huruf_nilai || '-'}).`}
                     </p>
                   </div>
@@ -320,7 +320,7 @@ export const StepMataKuliah: React.FC<StepMataKuliahProps> = ({
           disabled={isAboveMax}
           className="gap-2 shadow-sm"
         >
-          {isZeroSelected ? 'Lanjut Tanpa Konversi SKS' : 'Lanjut ke Review & Submit'}{' '}
+          {isZeroSelected ? 'Lanjut Tanpa Konversi SKS' : 'Lanjut ke Tinjau & Kirim'}{' '}
           <ArrowRight className="w-4 h-4" />
         </Button>
       </div>

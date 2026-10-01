@@ -7,7 +7,6 @@ import {
   Network,
   ArrowRight,
   TrendingUp,
-  Award,
   Layers,
   CheckCircle2,
   Clock,
@@ -213,10 +212,10 @@ export default function WadekDashboardPage() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-              <PieChartIcon className="w-4 h-4 text-primary" /> Proporsi Mahasiswa Antar Prodi
+              <PieChartIcon className="w-4 h-4 text-primary" /> Pengajuan per Program Studi
             </CardTitle>
             <CardDescription className="text-xs">
-              Persentase dan jumlah mahasiswa yang mengajukan prestasi dari 3 program studi
+              Distribusi pengajuan berdasarkan program studi
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -228,10 +227,10 @@ export default function WadekDashboardPage() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-primary" /> Distribusi Status Keseluruhan
+              <TrendingUp className="w-4 h-4 text-primary" /> Distribusi Status Prestasi
             </CardTitle>
             <CardDescription className="text-xs">
-              Proporsi status seluruh pengajuan di tingkat fakultas
+              Komparasi status pengajuan di tingkat fakultas
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">

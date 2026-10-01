@@ -276,7 +276,7 @@ export default function AdminKelolaRolePage() {
         <div className="space-y-1">
           <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 inline-flex items-center gap-1.5 mb-1">
             <ShieldCheck className="w-3.5 h-3.5 text-rose-400" />
-            Role Management & Audit Trail System
+            Manajemen Peran & Riwayat Perubahan
           </span>
           <h1 className="text-2xl font-bold tracking-tight">Manajemen Multi-Role Pengguna</h1>
           <p className="text-sm text-slate-300 max-w-2xl">
@@ -635,7 +635,7 @@ export default function AdminKelolaRolePage() {
                   <SelectContent className="dark:bg-slate-800 dark:border-slate-700">
                     {prodiList.map((p: any) => (
                       <SelectItem key={p.id} value={String(p.id)}>
-                        {p.singkatan} — {p.nama}
+                        {p.singkatan} - {p.nama}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -947,7 +947,7 @@ export default function AdminKelolaRolePage() {
                         .filter((p: any) => !activeProdiIds.includes(p.id))
                         .map((p: any) => (
                           <SelectItem key={p.id} value={String(p.id)}>
-                            {p.singkatan} — {p.nama}
+                            {p.singkatan} - {p.nama}
                           </SelectItem>
                         ));
                     })()}

@@ -130,7 +130,7 @@ export default function VerifikatorDashboardPage() {
       {/* Stats Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <StatsCard
-          title="Antrian Verifikasi"
+          title="Antrean Verifikasi"
           value={totalPending}
           icon={Clock}
           iconClassName="text-amber-600 bg-amber-50 dark:bg-amber-950/40 dark:text-amber-400"
@@ -246,10 +246,10 @@ export default function VerifikatorDashboardPage() {
           <CardHeader className="pb-2">
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <Award className="w-4 h-4 text-purple-600" />
-              Proporsi Pengajuan Mahasiswa Antar Prodi
+              Pengajuan per Program Studi
             </CardTitle>
             <CardDescription className="text-xs">
-              Persentase dan jumlah mahasiswa pengaju dari 3 program studi
+              Distribusi pengajuan berdasarkan program studi
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -263,7 +263,7 @@ export default function VerifikatorDashboardPage() {
         <CardHeader className="pb-3 border-b border-slate-100 dark:border-slate-800 flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100">
-              Antrian Pengajuan Pending
+              Antrean Pengajuan Pending
             </CardTitle>
             <CardDescription className="text-xs">
               Pengajuan prestasi mahasiswa yang menunggu verifikasi Anda
@@ -281,12 +281,12 @@ export default function VerifikatorDashboardPage() {
           {isLoadingPending ? (
             <div className="p-8 text-center bg-slate-50 dark:bg-slate-900 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800">
               <Clock className="w-6 h-6 animate-spin mx-auto text-primary mb-2" />
-              <p className="text-xs text-muted-foreground">Memuat antrian verifikasi...</p>
+              <p className="text-xs text-muted-foreground">Memuat antrean verifikasi...</p>
             </div>
           ) : pendingItems.length === 0 ? (
             <div className="text-center py-10 px-4 bg-slate-50/50 dark:bg-slate-900/50 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800">
               <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-2 opacity-80" />
-              <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Antrian Bersih</h4>
+              <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Tidak Ada Antrean Pending</h4>
               <p className="text-xs text-muted-foreground mt-0.5">
                 Saat ini tidak ada pengajuan pending yang menunggu verifikasi pada prodi Anda.
               </p>

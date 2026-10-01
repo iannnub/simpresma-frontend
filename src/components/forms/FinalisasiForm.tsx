@@ -7,7 +7,8 @@ import {
   Link as LinkIcon,
   Loader2,
   Lock,
-  Sparkles,
+  GraduationCap,
+  Award,
   AlertTriangle,
   MessageSquare,
 } from 'lucide-react';
@@ -137,16 +138,16 @@ export const FinalisasiForm: React.FC<FinalisasiFormProps> = ({ pengajuan }) => 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
               <CardTitle className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-emerald-600" />
+                <GraduationCap className="w-4 h-4 text-emerald-600" />
                 Formulir Finalisasi Konversi Nilai SKS
               </CardTitle>
               <CardDescription className="text-xs text-slate-600 mt-0.5">
-                Input huruf nilai resmi sesuai matriks dan cantumkan tautan Surat Keputusan (SK)
+                Input nilai huruf sesuai matriks dan cantumkan tautan Surat Keputusan (SK)
               </CardDescription>
             </div>
             <Badge className="bg-emerald-600 text-white font-mono text-xs px-2.5 py-1 self-start sm:self-center gap-1.5">
               <Lock className="w-3 h-3" />
-              Nilai Matriks Resmi: {snapshotHurufNilai}
+              Nilai Matriks: {snapshotHurufNilai}
             </Badge>
           </div>
         </CardHeader>
@@ -157,7 +158,7 @@ export const FinalisasiForm: React.FC<FinalisasiFormProps> = ({ pengajuan }) => 
               {/* Strict Notice */}
               <Alert className="bg-amber-50 border-amber-200 text-amber-950">
                 <AlertTriangle className="h-4 w-4 text-amber-600" />
-                <AlertTitle className="text-xs font-bold">Ketentuan Mutlak Matriks Konversi</AlertTitle>
+                <AlertTitle className="text-xs font-bold">Ketentuan Nilai Matriks</AlertTitle>
                 <AlertDescription className="text-xs leading-relaxed mt-0.5">
                   Berdasarkan peraturan dekanat dan snapshot verifikasi, nilai yang diinput{' '}
                   <strong>WAJIB sama persis dengan nilai matriks ({snapshotHurufNilai})</strong>. Pilihan
@@ -212,7 +213,7 @@ export const FinalisasiForm: React.FC<FinalisasiFormProps> = ({ pengajuan }) => 
             /* Non-Conversion Notice */
             <div className="p-4 bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/60 rounded-xl space-y-1.5 text-xs text-sky-950 dark:text-sky-200">
               <div className="font-semibold flex items-center gap-1.5 text-sky-900 dark:text-sky-100 text-sm">
-                <Sparkles className="w-4 h-4 text-sky-600" />
+                <Award className="w-4 h-4 text-sky-600" />
                 Pencatatan Prestasi Portofolio / SKPI (Tanpa Konversi SKS)
               </div>
               <p className="leading-relaxed text-sky-800 dark:text-sky-300">
@@ -228,7 +229,7 @@ export const FinalisasiForm: React.FC<FinalisasiFormProps> = ({ pengajuan }) => 
           <div className="space-y-2 p-4 bg-slate-50/80 rounded-xl border border-slate-200">
             <Label htmlFor="link_sk_konversi" className="text-xs font-semibold flex items-center gap-1.5">
               <FileText className="w-3.5 h-3.5 text-primary" />
-              Tautan Surat Keputusan (SK) Konversi / Pengesahan Resmi (Opsional)
+              Tautan Surat Keputusan (SK) Konversi (Opsional)
             </Label>
             <div className="relative">
               <LinkIcon className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -245,8 +246,7 @@ export const FinalisasiForm: React.FC<FinalisasiFormProps> = ({ pengajuan }) => 
             </div>
             {urlError && <p className="text-xs font-medium text-destructive">{urlError}</p>}
             <p className="text-[11px] text-muted-foreground">
-              Cantumkan tautan arsip digital SK Konversi resmi jika telah diterbitkan dan ditandatangani
-              oleh Dekanat/Pimpinan Fakultas.
+              Cantumkan tautan berkas SK jika telah diterbitkan dan ditandatangani oleh Dekanat atau Pimpinan Fakultas.
             </p>
           </div>
 

@@ -8,7 +8,6 @@ import {
   PlusCircle,
   ArrowRight,
   TrendingUp,
-  Sparkles,
   PieChart as PieChartIcon,
 } from 'lucide-react';
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
@@ -76,16 +75,14 @@ export default function MahasiswaDashboardPage() {
       {/* Welcome Banner */}
       <div className="bg-gradient-to-r from-primary to-blue-700 rounded-2xl p-6 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white inline-flex items-center gap-1.5 mb-1">
-            <Sparkles className="w-3.5 h-3.5 text-blue-200" />
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white inline-flex items-center mb-1">
             Portal Mahasiswa
           </span>
           <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
             Selamat Datang, {user?.nama}
           </h2>
           <p className="text-sm text-blue-100 max-w-xl">
-            Ajukan prestasi perlombaan Anda untuk mendapatkan konversi SKS mata kuliah secara resmi
-            sesuai panduan fakultas.
+            Ajukan prestasi lomba Anda untuk konversi SKS mata kuliah.
           </p>
         </div>
         <div className="shrink-0 w-full sm:w-auto">
@@ -140,10 +137,10 @@ export default function MahasiswaDashboardPage() {
           <CardHeader className="pb-2">
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <TrendingUp className="w-4 h-4 text-primary" />
-              Distribusi Status Prestasi Anda
+              Distribusi Status Prestasi
             </CardTitle>
             <CardDescription className="text-xs">
-              Proporsi status seluruh pengajuan prestasi Anda
+              Ringkasan status pengajuan yang telah diajukan
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -227,10 +224,10 @@ export default function MahasiswaDashboardPage() {
           <CardHeader className="pb-2">
             <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <PieChartIcon className="w-4 h-4 text-primary" />
-              Proporsi Pengajuan Mahasiswa Antar Prodi
+              Pengajuan per Program Studi
             </CardTitle>
             <CardDescription className="text-xs">
-              Persentase dan jumlah mahasiswa pengaju dari 3 program studi
+              Sebaran pengajuan mahasiswa di tiap program studi
             </CardDescription>
           </CardHeader>
           <CardContent>

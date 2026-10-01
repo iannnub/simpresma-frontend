@@ -11,7 +11,7 @@ const STEPS = [
   { step: 1, title: 'Informasi Lomba', desc: 'Data & Capaian' },
   { step: 2, title: 'Tautan Bukti', desc: 'Sertifikat & Dokumen' },
   { step: 3, title: 'Mata Kuliah', desc: 'Pilihan Konversi SKS' },
-  { step: 4, title: 'Konfirmasi', desc: 'Review & Submit' },
+  { step: 4, title: 'Konfirmasi', desc: 'Tinjau & Kirim' },
 ];
 
 export const StepIndicator: React.FC<StepIndicatorProps> = ({ currentStep }) => {

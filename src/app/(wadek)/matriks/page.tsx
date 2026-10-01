@@ -3,8 +3,6 @@ import { toast } from 'sonner';
 import {
   Sliders,
   Edit,
-  Clock,
-  Sparkles,
   CheckCircle2,
   XCircle,
   Filter,

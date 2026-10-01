@@ -96,7 +96,7 @@ export default function VerifikatorDetailPengajuanPage() {
           verifikasi Anda.
         </p>
         <Button asChild variant="outline" className="dark:border-slate-800 dark:hover:bg-slate-800">
-          <Link to="/verifikator/pengajuan">Kembali ke Antrian</Link>
+          <Link to="/verifikator/pengajuan">Kembali ke Antrean</Link>
         </Button>
       </div>
     );
@@ -261,7 +261,7 @@ export default function VerifikatorDetailPengajuanPage() {
           <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
               <span className="font-bold text-slate-900 dark:text-slate-100 block">Sertifikat / Piagam Penghargaan</span>
-              <span className="text-[11px] text-muted-foreground">Bukti resmi kejuaraan lomba</span>
+              <span className="text-[11px] text-muted-foreground">Bukti sertifikat atau piagam kejuaraan lomba</span>
             </div>
             <a
               href={pengajuan.link_sertifikat}
@@ -279,7 +279,7 @@ export default function VerifikatorDetailPengajuanPage() {
               <div>
                 <span className="font-bold text-slate-900 dark:text-slate-100 block">Surat Tugas Mahasiswa</span>
                 <span className="text-[11px] text-muted-foreground">
-                  Surat tugas delegasi resmi fakultas / universitas
+                  Surat tugas delegasi fakultas atau universitas
                 </span>
               </div>
               <a
@@ -404,7 +404,7 @@ export default function VerifikatorDetailPengajuanPage() {
           <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
             <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-              Pengajuan ini siap untuk diproses dan diverifikasi oleh Anda.
+              Pengajuan menunggu verifikasi.
             </span>
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -421,7 +421,7 @@ export default function VerifikatorDetailPengajuanPage() {
               className="text-xs gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm"
             >
               <CheckCircle2 className="w-4 h-4" />
-              Terima & Setujui
+              Setujui Pengajuan
             </Button>
           </div>
         </div>

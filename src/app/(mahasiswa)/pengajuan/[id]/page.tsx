@@ -127,10 +127,10 @@ export default function MahasiswaDetailPengajuanPage() {
             <AlertDescription className="text-xs text-emerald-800 dark:text-emerald-300 mt-1 leading-relaxed">
               <strong>Catatan / Feedback Verifikator:</strong>
               <div className="mt-1 p-3 bg-white/90 dark:bg-slate-900/80 rounded-xl border border-emerald-200 dark:border-emerald-800 font-medium text-slate-800 dark:text-slate-200">
-                "{pengajuan.feedback_verifikator || 'Pengajuan telah diperiksa dan disetujui sesuai regulasi konversi SKS fakultas.'}"
+                "{pengajuan.feedback_verifikator || 'Pengajuan telah diperiksa dan disetujui untuk konversi SKS.'}"
               </div>
               <p className="mt-1.5 text-[11px] text-emerald-700 dark:text-emerald-400">
-                Status saat ini sedang menunggu antrean finalisasi konversi nilai dan penerbitan SK oleh Staff Tendik.
+                Status saat ini menunggu penerbitan SK konversi oleh Tendik.
               </p>
             </AlertDescription>
           </div>
@@ -196,7 +196,7 @@ export default function MahasiswaDetailPengajuanPage() {
                 className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 shadow-sm transition-colors"
               >
                 <FileText className="w-3.5 h-3.5" />
-                Unduh / Lihat Surat Keputusan (SK) Konversi Resmi
+                Unduh Surat Keputusan (SK) Konversi
                 <ExternalLink className="w-3 h-3 ml-0.5" />
               </a>
             </div>
