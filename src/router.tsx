@@ -9,6 +9,7 @@ import LoadingSpinner from '@/components/shared/LoadingSpinner';
 
 // Auth Pages (keep eager — critical path)
 import LoginPage from '@/app/(auth)/login/page';
+import GapuraCallbackPage from '@/app/(auth)/gapura-callback/page';
 import ForbiddenPage from '@/app/ForbiddenPage';
 import NotFoundPage from '@/app/NotFoundPage';
 
@@ -83,6 +84,10 @@ export const router = createBrowserRouter([
   {
     path: ROUTES.LOGIN,
     element: <LoginPage />,
+  },
+  {
+    path: ROUTES.GAPURA_CALLBACK,
+    element: <GapuraCallbackPage />,
   },
 
   // Protected Routes Wrapper

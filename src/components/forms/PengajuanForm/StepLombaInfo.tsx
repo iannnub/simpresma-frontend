@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
@@ -15,11 +15,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useBidang, useTahapan, useTingkatan, useMatriks } from '@/lib/hooks/useRefData';
-import { Award, ArrowRight, Info, CheckCircle2 } from 'lucide-react';
+import { Award, ArrowRight, Info } from 'lucide-react';
 import type { MatriksKonversi } from '@/types';
 
 interface StepLombaInfoProps {

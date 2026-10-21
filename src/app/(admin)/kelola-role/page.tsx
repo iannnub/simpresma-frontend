@@ -8,10 +8,6 @@ import {
   AlertCircle,
   Loader2,
   Users,
-  Shield,
-  Clock,
-  ArrowRight,
-  Filter,
   Building2,
   Plus,
 } from 'lucide-react';
@@ -55,7 +51,6 @@ import {
   useAvailableRoles,
 } from '@/lib/hooks/useAdmin';
 import { useProdi } from '@/lib/hooks/useRefData';
-import type { UserRole } from '@/types';
 
 // Palette badge role
 const ROLE_BADGE_STYLES: Record<string, { label: string; badgeClass: string }> = {
@@ -272,9 +267,9 @@ export default function AdminKelolaRolePage() {
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-rose-950 to-slate-900 rounded-2xl p-6 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 inline-flex items-center gap-1.5 mb-1">
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-rose-950 text-rose-300 border border-rose-800/60 inline-flex items-center gap-1.5 mb-1">
             <ShieldCheck className="w-3.5 h-3.5 text-rose-400" />
             Manajemen Peran & Riwayat Perubahan
           </span>
@@ -289,7 +284,7 @@ export default function AdminKelolaRolePage() {
             id="open-global-history-btn"
             variant="outline"
             onClick={() => handleOpenHistory(undefined)}
-            className="gap-2 bg-white/10 hover:bg-white/20 border-white/20 text-white font-medium"
+            className="gap-2 bg-slate-800 hover:bg-slate-700 border-slate-700 text-white font-medium"
           >
             <History className="w-4 h-4 text-rose-300" />
             Riwayat Audit Trail

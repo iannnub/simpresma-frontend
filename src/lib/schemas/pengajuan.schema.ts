@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-const urlValidator = z
+export const urlValidator = z
   .string()
   .trim()
   .min(1, 'Tautan URL wajib diisi')
   .url('Harus berupa tautan URL valid (contoh: https://...)');
 
-const optionalUrlValidator = z
+export const optionalUrlValidator = z
   .string()
   .trim()
   .optional()

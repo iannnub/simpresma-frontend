@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import {
-  Users,
   Building2,
   Mail,
   Phone,
   Search,
   ExternalLink,
   ShieldCheck,
-  Award,
 } from 'lucide-react';
 
 import { Input } from '@/components/ui/input';
@@ -48,24 +46,24 @@ export default function DirektoriVerifikatorPage() {
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 rounded-2xl p-6 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white inline-flex items-center gap-1.5 mb-1">
-            <ShieldCheck className="w-3.5 h-3.5 text-blue-200" />
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 inline-flex items-center gap-1.5 mb-1">
+            <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
             Direktori Fakultas
           </span>
           <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
             Direktori Tim Dosen Verifikator
           </h2>
-          <p className="text-sm text-blue-100 max-w-xl">
+          <p className="text-sm text-slate-300 max-w-xl">
             {currentRole === 'mahasiswa'
               ? `Daftar dosen verifikator Program Studi ${user?.prodi?.nama || 'Anda'} yang bertugas memvalidasi pengajuan konversi prestasi.`
               : 'Daftar dosen verifikator yang ditugaskan Dekanat untuk memvalidasi dan menilai prestasi mahasiswa di setiap program studi.'}
           </p>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-3 rounded-xl text-center self-start sm:self-center shrink-0">
+        <div className="bg-slate-800/90 border border-slate-700 px-4 py-3 rounded-xl text-center self-start sm:self-center shrink-0">
           <div className="text-2xl font-black">{totalDosen}</div>
-          <div className="text-[11px] text-blue-200">Dosen Verifikator Aktif</div>
+          <div className="text-[11px] text-slate-400">Dosen Verifikator Aktif</div>
         </div>
       </div>
 

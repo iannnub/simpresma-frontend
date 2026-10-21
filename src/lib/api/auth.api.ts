@@ -13,6 +13,10 @@ export const authApi = {
   me: async (): Promise<ApiResponse<User>> => {
     return (await apiClient.get('/auth/me')) as unknown as ApiResponse<User>;
   },
+
+  getGapuraRedirectUrl: async (): Promise<ApiResponse<{ redirect_url: string }>> => {
+    return (await apiClient.get('/auth/gapura/redirect?format=json')) as unknown as ApiResponse<{ redirect_url: string }>;
+  },
 };
 
 export default authApi;

@@ -8,7 +8,6 @@ import {
   TrendingUp,
   ArrowRight,
   Eye,
-  Calendar,
   Building2,
   CheckCircle2,
 } from 'lucide-react';
@@ -82,16 +81,16 @@ export default function TendikDashboardPage() {
   return (
     <div className="space-y-6">
       {/* Welcome Banner */}
-      <div className="bg-gradient-to-r from-emerald-800 to-teal-700 rounded-2xl p-6 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white inline-flex items-center gap-1.5 mb-1">
-            <FileCheck2 className="w-3.5 h-3.5 text-emerald-200" />
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 inline-flex items-center gap-1.5 mb-1">
+            <FileCheck2 className="w-3.5 h-3.5 text-emerald-400" />
             Portal Tenaga Kependidikan (Tendik)
           </span>
           <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
             Selamat Datang, {user?.nama}
           </h2>
-          <p className="text-sm text-emerald-100 max-w-xl">
+          <p className="text-sm text-slate-300 max-w-xl">
             Proses pengajuan prestasi yang telah disetujui verifikator untuk finalisasi nilai SKS dan
             penerbitan Surat Keputusan (SK) konversi.
           </p>
@@ -104,7 +103,7 @@ export default function TendikDashboardPage() {
           />
           <Button
             asChild
-            className="w-full sm:w-auto justify-center bg-white text-emerald-900 hover:bg-emerald-50 dark:bg-slate-900 dark:text-emerald-300 dark:hover:bg-slate-800 font-semibold shadow-sm gap-2 text-xs sm:text-sm h-10 px-4"
+            className="w-full sm:w-auto justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-medium shadow-sm gap-2 text-xs sm:text-sm h-10 px-4"
           >
             <Link to="/tendik/pengajuan" className="flex items-center justify-center">
               <Eye className="w-4 h-4 shrink-0" />

@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "type-check": "tsc --noEmit",
     "lint": "eslint src",
+    "test": "vitest run src/tests",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -27,7 +28,8 @@
     "tailwindcss": "^3.4.19",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "~6.0.2",
-    "vite": "^8.2.2"
+    "vite": "^8.2.2",
+    "vitest": "^5.0.5"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

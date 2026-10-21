@@ -105,10 +105,10 @@ export default function WadekDashboardPage() {
   return (
     <div className="space-y-6">
       {/* Welcome Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 rounded-2xl p-6 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white inline-flex items-center gap-1.5 mb-1">
-            <Building2 className="w-3.5 h-3.5 text-blue-200" />
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 inline-flex items-center gap-1.5 mb-1">
+            <Building2 className="w-3.5 h-3.5 text-blue-400" />
             Portal Wakil Dekan I (Akademik & Kemahasiswaan)
           </span>
           <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">

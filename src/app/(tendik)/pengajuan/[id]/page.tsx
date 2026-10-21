@@ -11,7 +11,6 @@ import {
   AlertTriangle,
   User,
   Phone,
-  Building2,
   FileText,
   UserCheck,
   MessageSquare,

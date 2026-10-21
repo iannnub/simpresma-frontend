@@ -30,7 +30,7 @@ export const StatistikChart: React.FC<StatistikChartProps> = ({ data, height = 2
   }
 
   // Custom label renderer on slices: renders exact number & percentage
-  const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, value }: any) => {
+  const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent: _percent, value }: any) => {
     if (!value || value === 0) return null;
     const RADIAN = Math.PI / 180;
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;

@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 
 import { loginSchema, type LoginFormData } from '@/lib/schemas/auth.schema';
 import { useAuth } from '@/lib/hooks/useAuth';
+import authApi from '@/lib/api/auth.api';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -16,6 +17,7 @@ import VersionBadge from '@/components/shared/VersionBadge';
 export default function LoginPage() {
   const { login } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+  const [isGapuraLoading, setIsGapuraLoading] = useState(false);
 
   const {
     register,
@@ -55,6 +57,27 @@ export default function LoginPage() {
     setValue('password', password, { shouldValidate: true });
   };
 
+  const handleGapuraLogin = async () => {
+    setIsGapuraLoading(true);
+    try {
+      const res = await authApi.getGapuraRedirectUrl();
+      if (res.data?.redirect_url) {
+        window.location.href = res.data.redirect_url;
+      } else {
+        throw new Error('URL pengalihan GAPURA tidak ditemukan.');
+      }
+    } catch (err: any) {
+      const errorMsg =
+        err?.response?.data?.message ||
+        err?.message ||
+        'Layanan GAPURA UNEJ sedang tidak dapat dijangkau. Silakan gunakan akun lokal untuk demo.';
+      toast.error('Gagal Menghubungkan ke GAPURA UNEJ', {
+        description: errorMsg,
+      });
+      setIsGapuraLoading(false);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col justify-center items-center px-4 py-12 sm:px-6 lg:px-8 transition-colors duration-200 relative" role="main" aria-label="Halaman Login SIMPRESMA">
       {/* Theme Toggle in Top Right */}
@@ -84,6 +107,46 @@ export default function LoginPage() {
           </CardHeader>
           <form onSubmit={handleSubmit(onSubmit)} aria-label="Form login">
             <CardContent className="space-y-4">
+              {/* Otorisasi GAPURA UNEJ (SSO Kampus) */}
+              <div className="space-y-2">
+                <Button
+                  type="button"
+                  variant="default"
+                  className="w-full h-10 bg-slate-900 hover:bg-slate-800 text-white dark:bg-slate-100 dark:hover:bg-white dark:text-slate-900 font-semibold shadow-sm transition-all flex items-center justify-center gap-2.5"
+                  onClick={handleGapuraLogin}
+                  disabled={isGapuraLoading || isLoading}
+                >
+                  {isGapuraLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Menghubungkan ke GAPURA...</span>
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-5 h-5 rounded bg-amber-400 text-slate-950 flex items-center justify-center font-black text-xs shrink-0">
+                        G
+                      </div>
+                      <span>Masuk dengan GAPURA UNEJ</span>
+                    </>
+                  )}
+                </Button>
+                <p className="text-[11px] text-center text-muted-foreground leading-normal">
+                  Portal terintegrasi civitas akademika Universitas Jember
+                </p>
+              </div>
+
+              {/* Pemisah Akun Lokal / Pengujian */}
+              <div className="relative my-2">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="w-full border-t border-slate-200 dark:border-slate-800" />
+                </div>
+                <div className="relative flex justify-center text-[11px] uppercase">
+                  <span className="bg-white dark:bg-slate-900 px-2 text-muted-foreground font-medium">
+                    Atau login lokal / demo
+                  </span>
+                </div>
+              </div>
+
               <div className="space-y-1.5">
                 <Label htmlFor="email">Alamat Email</Label>
                 <div className="relative">

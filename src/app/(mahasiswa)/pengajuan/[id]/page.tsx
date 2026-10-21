@@ -7,13 +7,10 @@ import {
   FileCheck,
   BookOpen,
   ExternalLink,
-  Clock,
   AlertTriangle,
   CheckCircle2,
   Phone,
-  Building2,
   FileText,
-  UserCheck,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';

@@ -1,6 +1,7 @@
 export const ROUTES = {
   HOME: '/',
   LOGIN: '/login',
+  GAPURA_CALLBACK: '/auth/callback',
   FORBIDDEN: '/403',
 
   // Shared

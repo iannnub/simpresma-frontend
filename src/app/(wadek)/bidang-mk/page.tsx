@@ -6,7 +6,6 @@ import {
   Trash2,
   Filter,
   BookOpen,
-  Building2,
   AlertTriangle,
   Loader2,
 } from 'lucide-react';
@@ -36,7 +35,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { Badge } from '@/components/ui/badge';
 import BidangMKForm from '@/components/forms/BidangMKForm';
 import { useBidang, useProdi } from '@/lib/hooks/useRefData';
 import { useBidangMKList, useAddBidangMK, useDeleteBidangMK } from '@/lib/hooks/useWadek';

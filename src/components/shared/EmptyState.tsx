@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Inbox, FileText, AlertCircle, HelpCircle } from 'lucide-react';
+import { Inbox } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils/cn';
 

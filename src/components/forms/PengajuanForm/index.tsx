@@ -28,8 +28,6 @@ export function PengajuanForm() {
   const [selectedMkIds, setSelectedMkIds] = useState<number[]>([]);
   const [selectedMks, setSelectedMks] = useState<MataKuliah[]>([]);
 
-  const hasConversion = Boolean(matriks && matriks.min_sks !== null && matriks.max_sks !== null);
-
   // Step 1 -> Step 2
   const handleStep1Next = (
     data: StepLombaInfoFormData,

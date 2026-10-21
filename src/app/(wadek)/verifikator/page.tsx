@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import {
-  Users,
   UserPlus,
   UserX,
   ShieldCheck,

@@ -73,22 +73,22 @@ export default function MahasiswaDashboardPage() {
   return (
     <div className="space-y-6">
       {/* Welcome Banner */}
-      <div className="bg-gradient-to-r from-primary to-blue-700 rounded-2xl p-6 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/20 text-white inline-flex items-center mb-1">
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-300 border border-blue-800/60 inline-flex items-center mb-1">
             Portal Mahasiswa
           </span>
           <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
             Selamat Datang, {user?.nama}
           </h2>
-          <p className="text-sm text-blue-100 max-w-xl">
+          <p className="text-sm text-slate-300 max-w-xl">
             Ajukan prestasi lomba Anda untuk konversi SKS mata kuliah.
           </p>
         </div>
         <div className="shrink-0 w-full sm:w-auto">
           <Button
             asChild
-            className="w-full sm:w-auto justify-center bg-white text-primary hover:bg-blue-50 dark:bg-slate-900 dark:text-blue-400 dark:hover:bg-slate-800 font-semibold shadow-sm gap-2 text-xs sm:text-sm h-10 px-4"
+            className="w-full sm:w-auto justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-sm gap-2 text-xs sm:text-sm h-10 px-4"
           >
             <Link to="/mahasiswa/pengajuan/new" className="flex items-center justify-center">
               <PlusCircle className="w-4 h-4 shrink-0" />
